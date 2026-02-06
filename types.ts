@@ -24,11 +24,12 @@ export interface ScoreSet {
   contestantId: string;
   roundId: number;
   judgeName: string;
-  criteriaScores: Record<string, number>; // criterionId -> score
+  judgeIndex: number; // 0-4 for the 5 judges
+  criteriaScores: Record<string, number>;
 }
 
-export interface AppState {
-  judges: string[];
-  currentJudge: string | null;
+export interface SessionState {
+  roomId: string;
   scores: ScoreSet[];
+  activeJudges: string[];
 }

@@ -5,20 +5,20 @@ export const CONTESTANTS: Contestant[] = [
   {
     id: 'c1',
     name: '老崔',
-    title: '硬核摇滚 / 实力唱将',
-    image: 'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=800&auto=format&fit=crop'
+    title: '硬核摇滚 / 音乐诗人',
+    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=800&auto=format&fit=crop' // Placeholder for Image 2
   },
   {
     id: 'c2',
     name: '味全',
-    title: '灵魂歌者 / 丝滑声线',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop'
+    title: '灵魂唱将 / 柔情男声',
+    image: 'https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?q=80&w=800&auto=format&fit=crop' // Placeholder for Image 3
   },
   {
     id: 'c3',
     name: 'Eric',
-    title: '潮流先锋 / 全能制作',
-    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop'
+    title: '舞台先锋 / 全能偶像',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=800&auto=format&fit=crop' // Placeholder for Image 4
   }
 ];
 
@@ -26,7 +26,7 @@ export const ROUNDS: RoundDefinition[] = [
   {
     id: 1,
     title: '第一轮：自选曲目',
-    description: '展示选手最真实的声音特色与自我风格。',
+    description: '展示选手最真实的声音特色与自我风格（满分30分）',
     totalMax: 30,
     criteria: [
       { id: 'pitch', name: '音准与节奏', maxScore: 10 },
@@ -39,7 +39,7 @@ export const ROUNDS: RoundDefinition[] = [
   {
     id: 2,
     title: '第二轮：抽选曲目',
-    description: '考验选手的曲风适应能力与现场应变。',
+    description: '考验选手的曲风适应能力与现场应变（满分35分）',
     totalMax: 35,
     criteria: [
       { id: 'pitch', name: '音准与节奏', maxScore: 12 },
@@ -52,7 +52,7 @@ export const ROUNDS: RoundDefinition[] = [
   {
     id: 3,
     title: '第三轮：互选曲目',
-    description: '终极对决，对手间的默契与博弈。',
+    description: '终极对决，对手间的默契与博弈（满分35分）',
     totalMax: 35,
     criteria: [
       { id: 'pitch', name: '音准与节奏', maxScore: 12 },
@@ -64,4 +64,4 @@ export const ROUNDS: RoundDefinition[] = [
   }
 ];
 
-export const MAIN_VISUAL = "https://images.unsplash.com/photo-1493225255756-d9584f8606e9?q=80&w=1200&auto=format&fit=crop";
+export const MAIN_VISUAL = "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=1200&auto=format&fit=crop";

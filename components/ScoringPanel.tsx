@@ -7,12 +7,13 @@ import { ChevronRight, Save, CheckCircle2 } from 'lucide-react';
 interface Props {
   contestant: Contestant;
   judgeName: string;
+  judgeIndex: number;
   existingScores: ScoreSet[];
   onSave: (score: ScoreSet) => void;
   onBack: () => void;
 }
 
-const ScoringPanel: React.FC<Props> = ({ contestant, judgeName, existingScores, onSave, onBack }) => {
+const ScoringPanel: React.FC<Props> = ({ contestant, judgeName, judgeIndex, existingScores, onSave, onBack }) => {
   const [activeRoundIdx, setActiveRoundIdx] = useState(0);
   const [localScores, setLocalScores] = useState<Record<number, Record<string, number>>>(() => {
     const initial: Record<number, Record<string, number>> = {};
@@ -39,10 +40,12 @@ const ScoringPanel: React.FC<Props> = ({ contestant, judgeName, existingScores, 
   };
 
   const handleSaveRound = (roundId: number) => {
+    // Adding judgeIndex to fulfill ScoreSet interface requirements
     const scoreSet: ScoreSet = {
       contestantId: contestant.id,
       roundId,
       judgeName,
+      judgeIndex,
       criteriaScores: localScores[roundId]
     };
     onSave(scoreSet);
