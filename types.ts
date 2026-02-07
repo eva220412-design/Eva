@@ -24,12 +24,13 @@ export interface ScoreSet {
   contestantId: string;
   roundId: number;
   judgeName: string;
-  judgeIndex: number; // 0-4 for the 5 judges
   criteriaScores: Record<string, number>;
+  updatedAt: number;
 }
 
-export interface SessionState {
-  roomId: string;
+export interface RoomData {
+  id: string;
+  judges: string[];
   scores: ScoreSet[];
-  activeJudges: string[];
+  createdAt: number;
 }
